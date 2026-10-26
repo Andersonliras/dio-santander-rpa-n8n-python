@@ -1,0 +1,127 @@
+{
+  "name": "Santander RPA - Assistente de Investimentos com N8N e Python",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "clientes-rpa",
+        "options": {}
+      },
+      "id": "1",
+      "name": "Webhook Receber Clientes RPA",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        220,
+        300
+      ],
+      "webhookId": "9b3c4f7a-8d1e-4c92-b05f-7f1a3e6d8c2b"
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/digitalinnovationone/dio-lab-assistente-investimentos-rpa-n8n/main/docs/data.csv",
+        "options": {}
+      },
+      "id": "2",
+      "name": "Download Catalogo Investimentos (CSV)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        460,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "headerRow": true
+        }
+      },
+      "id": "3",
+      "name": "Converter CSV para Objetos",
+      "type": "n8n-nodes-base.spreadsheetFile",
+      "typeVersion": 2,
+      "position": [
+        700,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Código JavaScript para cruzar dados dos clientes com opções de investimentos\nconst clientesData = $('Webhook Receber Clientes RPA').first().json.clientes || [];\nconst catalogoInvestimentos = $('Converter CSV para Objetos').all().map(item => item.json);\n\nconst resultados = [];\n\nfor (const cliente of clientesData) {\n  const perfil = (cliente.perfil_investidor || '').toLowerCase();\n  const saldo = Number(cliente.saldo_numerico || 0);\n\n  // Filtrar produtos compatíveis\n  const recomendados = catalogoInvestimentos.filter(p => {\n    const perfilProd = (p.perfil_recomendado || '').toLowerCase();\n    const minAporte = parseFloat(p.aplicacao_minima || '0');\n    return perfilProd === perfil && minAporte <= saldo;\n  });\n\n  // Montar texto de recomendação\n  const produtosStr = recomendados.map(p => `${p.nome_produto} (${p.rentabilidade_estimada})`).join(', ');\n  \n  const mensagem = `Olá ${cliente.nome}, seu perfil de investidor é ${cliente.perfil_investidor}. Com base no seu saldo disponível de ${cliente.saldo_formatado}, sugerimos as opções: ${produtosStr}.`;\n\n  resultados.push({\n    json: {\n      cliente_id: cliente.id,\n      nome: cliente.nome,\n      email: cliente.email,\n      perfil: cliente.perfil_investidor,\n      saldo: cliente.saldo_formatado,\n      produtos_sugeridos: recomendados,\n      mensagem_personalizada: mensagem\n    }\n  });\n}\n\nreturn resultados;"
+      },
+      "id": "4",
+      "name": "Cruzar Perfil & Investimentos",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        940,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"sucesso\",\n  \"total_processado\": $input.all().length,\n  \"recomendacoes\": $input.all().map(item => item.json)\n}",
+        "options": {}
+      },
+      "id": "5",
+      "name": "Responder ao RPA Python",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook Receber Clientes RPA": {
+      "main": [
+        [
+          {
+            "node": "Download Catalogo Investimentos (CSV)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Catalogo Investimentos (CSV)": {
+      "main": [
+        [
+          {
+            "node": "Converter CSV para Objetos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Converter CSV para Objetos": {
+      "main": [
+        [
+          {
+            "node": "Cruzar Perfil & Investimentos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cruzar Perfil & Investimentos": {
+      "main": [
+        [
+          {
+            "node": "Responder ao RPA Python",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

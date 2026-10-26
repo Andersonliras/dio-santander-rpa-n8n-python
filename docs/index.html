@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal do Cliente - Banco Santander Investimentos</title>
+  <style>
+    :root {
+      --primary: #ec0000;
+      --primary-dark: #cc0000;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --accent-green: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-blue: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: 0 auto 2rem auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      background: var(--primary);
+      color: white;
+      font-weight: 800;
+      font-size: 1.25rem;
+      padding: 8px 14px;
+      border-radius: 6px;
+      letter-spacing: 1px;
+    }
+
+    .brand h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .status-badge {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-green);
+      border: 1px solid var(--accent-green);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .intro {
+      margin-bottom: 2rem;
+    }
+
+    .intro p {
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    .table-container {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th {
+      background: rgba(15, 23, 42, 0.7);
+      padding: 1rem 1.25rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 1.1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .profile-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .profile-conservador {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-green);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    .profile-moderado {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent-amber);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .profile-arrojado {
+      background: rgba(236, 0, 0, 0.15);
+      color: #ff6b6b;
+      border: 1px solid rgba(236, 0, 0, 0.4);
+    }
+
+    .saldo {
+      font-family: 'Courier New', monospace;
+      font-weight: 600;
+    }
+
+    footer {
+      max-width: 1100px;
+      margin: 3rem auto 0 auto;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="brand-logo">DIO</div>
+      <div>
+        <h1>Santander Open Finance</h1>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">Módulo RPA & Automação Inteligente n8n</p>
+      </div>
+    </div>
+    <div class="status-badge">Base Ativa • Simulação Web Scraping</div>
+  </header>
+
+  <main>
+    <div class="intro">
+      <h2>Lista de Clientes Elegíveis para Alocação de Recursos</h2>
+      <p>Estes registros são processados automaticamente pelo robô Python (RPA) e encaminhados via Webhook para orquestração no n8n.</p>
+    </div>
+
+    <div class="table-container">
+      <table id="tabela-clientes">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome do Cliente</th>
+            <th>E-mail</th>
+            <th>Saldo Disponível</th>
+            <th>Perfil do Investidor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="cliente-item">
+            <td class="cliente-id">CLI-001</td>
+            <td class="cliente-nome">Carlos Eduardo Silva</td>
+            <td class="cliente-email">carlos.silva@exemplo.com</td>
+            <td class="cliente-saldo saldo">R$ 15.000,00</td>
+            <td><span class="profile-badge profile-conservador cliente-perfil">Conservador</span></td>
+          </tr>
+          <tr class="cliente-item">
+            <td class="cliente-id">CLI-002</td>
+            <td class="cliente-nome">Mariana Vasconcelos Rios</td>
+            <td class="cliente-email">mariana.rios@exemplo.com</td>
+            <td class="cliente-saldo saldo">R$ 48.500,00</td>
+            <td><span class="profile-badge profile-moderado cliente-perfil">Moderado</span></td>
+          </tr>
+          <tr class="cliente-item">
+            <td class="cliente-id">CLI-003</td>
+            <td class="cliente-nome">Rafael Antunes Lima</td>
+            <td class="cliente-email">rafael.lima@exemplo.com</td>
+            <td class="cliente-saldo saldo">R$ 120.000,00</td>
+            <td><span class="profile-badge profile-arrojado cliente-perfil">Arrojado</span></td>
+          </tr>
+          <tr class="cliente-item">
+            <td class="cliente-id">CLI-004</td>
+            <td class="cliente-nome">Beatriz Fonseca Santos</td>
+            <td class="cliente-email">beatriz.fonseca@exemplo.com</td>
+            <td class="cliente-saldo saldo">R$ 8.200,00</td>
+            <td><span class="profile-badge profile-conservador cliente-perfil">Conservador</span></td>
+          </tr>
+          <tr class="cliente-item">
+            <td class="cliente-id">CLI-005</td>
+            <td class="cliente-nome">Lucas Guilherme Mendes</td>
+            <td class="cliente-email">lucas.mendes@exemplo.com</td>
+            <td class="cliente-saldo saldo">R$ 75.400,00</td>
+            <td><span class="profile-badge profile-moderado cliente-perfil">Moderado</span></td>
+          </tr>
+          <tr class="cliente-item">
+            <td class="cliente-id">CLI-006</td>
+            <td class="cliente-nome">Juliana Martins Prado</td>
+            <td class="cliente-email">juliana.prado@exemplo.com</td>
+            <td class="cliente-saldo saldo">R$ 210.000,00</td>
+            <td><span class="profile-badge profile-arrojado cliente-perfil">Arrojado</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>Projeto Desafio DIO: <strong>Criando um Processo de RPA com N8N e Python</strong></p>
+    <p>Santander 2026 - Automação com N8N</p>
+  </footer>
+</body>
+</html>

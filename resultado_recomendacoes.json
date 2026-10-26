@@ -1,0 +1,242 @@
+[
+  {
+    "cliente_id": "CLI-001",
+    "nome": "Carlos Eduardo Silva",
+    "email": "carlos.silva@exemplo.com",
+    "perfil": "Conservador",
+    "saldo": "R$ 15.000,00",
+    "produtos_sugeridos": [
+      {
+        "id": "INV-001",
+        "nome_produto": "Tesouro Selic 2029",
+        "categoria": "Renda Fixa Pública",
+        "perfil_recomendado": "Conservador",
+        "rentabilidade_estimada": "100% Selic",
+        "liquidez": "Diária (D+0)",
+        "risco": "Baixo",
+        "aplicacao_minima": "150.00"
+      },
+      {
+        "id": "INV-002",
+        "nome_produto": "CDB Banco Santander DI 102%",
+        "categoria": "Renda Fixa Privada",
+        "perfil_recomendado": "Conservador",
+        "rentabilidade_estimada": "102% CDI",
+        "liquidez": "Diária (D+0)",
+        "risco": "Baixo",
+        "aplicacao_minima": "100.00"
+      },
+      {
+        "id": "INV-003",
+        "nome_produto": "LCI Santander Sustentável 92%",
+        "categoria": "Renda Fixa Isenta",
+        "perfil_recomendado": "Conservador",
+        "rentabilidade_estimada": "92% CDI (Isento IR)",
+        "liquidez": "90 dias",
+        "risco": "Baixo",
+        "aplicacao_minima": "500.00"
+      }
+    ],
+    "mensagem_personalizada": "Olá Carlos Eduardo Silva, identificamos que seu perfil financeiro é CONSERVADOR com saldo de R$ 15.000,00 disponível para aplicação. Com base na nossa análise de mercado, recomendamos alocar seus recursos em: Tesouro Selic 2029 (100% Selic), CDB Banco Santander DI 102% (102% CDI). Acesse o App Santander para confirmar a operação com segurança!"
+  },
+  {
+    "cliente_id": "CLI-002",
+    "nome": "Mariana Vasconcelos Rios",
+    "email": "mariana.rios@exemplo.com",
+    "perfil": "Moderado",
+    "saldo": "R$ 48.500,00",
+    "produtos_sugeridos": [
+      {
+        "id": "INV-004",
+        "nome_produto": "Tesouro IPCA+ 2035",
+        "categoria": "Renda Fixa Híbrida",
+        "perfil_recomendado": "Moderado",
+        "rentabilidade_estimada": "IPCA + 6.35% a.a.",
+        "liquidez": "No Vencimento",
+        "risco": "Médio",
+        "aplicacao_minima": "200.00"
+      },
+      {
+        "id": "INV-005",
+        "nome_produto": "Fundo Imobiliário Santander Renda (SXRF11)",
+        "categoria": "Fundo Imobiliário",
+        "perfil_recomendado": "Moderado",
+        "rentabilidade_estimada": "DY 11.2% a.a.",
+        "liquidez": "D+2 (B3)",
+        "risco": "Médio",
+        "aplicacao_minima": "10.00"
+      },
+      {
+        "id": "INV-006",
+        "nome_produto": "Debênture Incentivada Vale 2030",
+        "categoria": "Renda Fixa Privada",
+        "perfil_recomendado": "Moderado",
+        "rentabilidade_estimada": "IPCA + 6.80% a.a.",
+        "liquidez": "No Vencimento",
+        "risco": "Médio",
+        "aplicacao_minima": "1000.00"
+      }
+    ],
+    "mensagem_personalizada": "Olá Mariana Vasconcelos Rios, identificamos que seu perfil financeiro é MODERADO com saldo de R$ 48.500,00 disponível para aplicação. Com base na nossa análise de mercado, recomendamos alocar seus recursos em: Tesouro IPCA+ 2035 (IPCA + 6.35% a.a.), Fundo Imobiliário Santander Renda (SXRF11) (DY 11.2% a.a.). Acesse o App Santander para confirmar a operação com segurança!"
+  },
+  {
+    "cliente_id": "CLI-003",
+    "nome": "Rafael Antunes Lima",
+    "email": "rafael.lima@exemplo.com",
+    "perfil": "Arrojado",
+    "saldo": "R$ 120.000,00",
+    "produtos_sugeridos": [
+      {
+        "id": "INV-007",
+        "nome_produto": "Fundo Santander FIC Ações Ibovespa Ativo",
+        "categoria": "Renda Variável",
+        "perfil_recomendado": "Arrojado",
+        "rentabilidade_estimada": "Variável (Supera Ibovespa)",
+        "liquidez": "D+3",
+        "risco": "Alto",
+        "aplicacao_minima": "500.00"
+      },
+      {
+        "id": "INV-008",
+        "nome_produto": "ETF Santander B3 Dividendos (ISND11)",
+        "categoria": "Renda Variável",
+        "perfil_recomendado": "Arrojado",
+        "rentabilidade_estimada": "Dividend Yield Focado",
+        "liquidez": "D+2 (B3)",
+        "risco": "Alto",
+        "aplicacao_minima": "50.00"
+      },
+      {
+        "id": "INV-009",
+        "nome_produto": "Fundo Multimercado Santander Macro Plus",
+        "categoria": "Multimercado",
+        "perfil_recomendado": "Arrojado",
+        "rentabilidade_estimada": "CDI + 4.5% a.a.",
+        "liquidez": "D+30",
+        "risco": "Alto",
+        "aplicacao_minima": "1000.00"
+      }
+    ],
+    "mensagem_personalizada": "Olá Rafael Antunes Lima, identificamos que seu perfil financeiro é ARROJADO com saldo de R$ 120.000,00 disponível para aplicação. Com base na nossa análise de mercado, recomendamos alocar seus recursos em: Fundo Santander FIC Ações Ibovespa Ativo (Variável (Supera Ibovespa)), ETF Santander B3 Dividendos (ISND11) (Dividend Yield Focado). Acesse o App Santander para confirmar a operação com segurança!"
+  },
+  {
+    "cliente_id": "CLI-004",
+    "nome": "Beatriz Fonseca Santos",
+    "email": "beatriz.fonseca@exemplo.com",
+    "perfil": "Conservador",
+    "saldo": "R$ 8.200,00",
+    "produtos_sugeridos": [
+      {
+        "id": "INV-001",
+        "nome_produto": "Tesouro Selic 2029",
+        "categoria": "Renda Fixa Pública",
+        "perfil_recomendado": "Conservador",
+        "rentabilidade_estimada": "100% Selic",
+        "liquidez": "Diária (D+0)",
+        "risco": "Baixo",
+        "aplicacao_minima": "150.00"
+      },
+      {
+        "id": "INV-002",
+        "nome_produto": "CDB Banco Santander DI 102%",
+        "categoria": "Renda Fixa Privada",
+        "perfil_recomendado": "Conservador",
+        "rentabilidade_estimada": "102% CDI",
+        "liquidez": "Diária (D+0)",
+        "risco": "Baixo",
+        "aplicacao_minima": "100.00"
+      },
+      {
+        "id": "INV-003",
+        "nome_produto": "LCI Santander Sustentável 92%",
+        "categoria": "Renda Fixa Isenta",
+        "perfil_recomendado": "Conservador",
+        "rentabilidade_estimada": "92% CDI (Isento IR)",
+        "liquidez": "90 dias",
+        "risco": "Baixo",
+        "aplicacao_minima": "500.00"
+      }
+    ],
+    "mensagem_personalizada": "Olá Beatriz Fonseca Santos, identificamos que seu perfil financeiro é CONSERVADOR com saldo de R$ 8.200,00 disponível para aplicação. Com base na nossa análise de mercado, recomendamos alocar seus recursos em: Tesouro Selic 2029 (100% Selic), CDB Banco Santander DI 102% (102% CDI). Acesse o App Santander para confirmar a operação com segurança!"
+  },
+  {
+    "cliente_id": "CLI-005",
+    "nome": "Lucas Guilherme Mendes",
+    "email": "lucas.mendes@exemplo.com",
+    "perfil": "Moderado",
+    "saldo": "R$ 75.400,00",
+    "produtos_sugeridos": [
+      {
+        "id": "INV-004",
+        "nome_produto": "Tesouro IPCA+ 2035",
+        "categoria": "Renda Fixa Híbrida",
+        "perfil_recomendado": "Moderado",
+        "rentabilidade_estimada": "IPCA + 6.35% a.a.",
+        "liquidez": "No Vencimento",
+        "risco": "Médio",
+        "aplicacao_minima": "200.00"
+      },
+      {
+        "id": "INV-005",
+        "nome_produto": "Fundo Imobiliário Santander Renda (SXRF11)",
+        "categoria": "Fundo Imobiliário",
+        "perfil_recomendado": "Moderado",
+        "rentabilidade_estimada": "DY 11.2% a.a.",
+        "liquidez": "D+2 (B3)",
+        "risco": "Médio",
+        "aplicacao_minima": "10.00"
+      },
+      {
+        "id": "INV-006",
+        "nome_produto": "Debênture Incentivada Vale 2030",
+        "categoria": "Renda Fixa Privada",
+        "perfil_recomendado": "Moderado",
+        "rentabilidade_estimada": "IPCA + 6.80% a.a.",
+        "liquidez": "No Vencimento",
+        "risco": "Médio",
+        "aplicacao_minima": "1000.00"
+      }
+    ],
+    "mensagem_personalizada": "Olá Lucas Guilherme Mendes, identificamos que seu perfil financeiro é MODERADO com saldo de R$ 75.400,00 disponível para aplicação. Com base na nossa análise de mercado, recomendamos alocar seus recursos em: Tesouro IPCA+ 2035 (IPCA + 6.35% a.a.), Fundo Imobiliário Santander Renda (SXRF11) (DY 11.2% a.a.). Acesse o App Santander para confirmar a operação com segurança!"
+  },
+  {
+    "cliente_id": "CLI-006",
+    "nome": "Juliana Martins Prado",
+    "email": "juliana.prado@exemplo.com",
+    "perfil": "Arrojado",
+    "saldo": "R$ 210.000,00",
+    "produtos_sugeridos": [
+      {
+        "id": "INV-007",
+        "nome_produto": "Fundo Santander FIC Ações Ibovespa Ativo",
+        "categoria": "Renda Variável",
+        "perfil_recomendado": "Arrojado",
+        "rentabilidade_estimada": "Variável (Supera Ibovespa)",
+        "liquidez": "D+3",
+        "risco": "Alto",
+        "aplicacao_minima": "500.00"
+      },
+      {
+        "id": "INV-008",
+        "nome_produto": "ETF Santander B3 Dividendos (ISND11)",
+        "categoria": "Renda Variável",
+        "perfil_recomendado": "Arrojado",
+        "rentabilidade_estimada": "Dividend Yield Focado",
+        "liquidez": "D+2 (B3)",
+        "risco": "Alto",
+        "aplicacao_minima": "50.00"
+      },
+      {
+        "id": "INV-009",
+        "nome_produto": "Fundo Multimercado Santander Macro Plus",
+        "categoria": "Multimercado",
+        "perfil_recomendado": "Arrojado",
+        "rentabilidade_estimada": "CDI + 4.5% a.a.",
+        "liquidez": "D+30",
+        "risco": "Alto",
+        "aplicacao_minima": "1000.00"
+      }
+    ],
+    "mensagem_personalizada": "Olá Juliana Martins Prado, identificamos que seu perfil financeiro é ARROJADO com saldo de R$ 210.000,00 disponível para aplicação. Com base na nossa análise de mercado, recomendamos alocar seus recursos em: Fundo Santander FIC Ações Ibovespa Ativo (Variável (Supera Ibovespa)), ETF Santander B3 Dividendos (ISND11) (Dividend Yield Focado). Acesse o App Santander para confirmar a operação com segurança!"
+  }
+]

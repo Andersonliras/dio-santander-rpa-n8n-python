@@ -1,0 +1,50 @@
+[
+  {
+    "id": "CLI-001",
+    "nome": "Carlos Eduardo Silva",
+    "email": "carlos.silva@exemplo.com",
+    "saldo_formatado": "R$ 15.000,00",
+    "saldo_numerico": 15000.0,
+    "perfil_investidor": "Conservador"
+  },
+  {
+    "id": "CLI-002",
+    "nome": "Mariana Vasconcelos Rios",
+    "email": "mariana.rios@exemplo.com",
+    "saldo_formatado": "R$ 48.500,00",
+    "saldo_numerico": 48500.0,
+    "perfil_investidor": "Moderado"
+  },
+  {
+    "id": "CLI-003",
+    "nome": "Rafael Antunes Lima",
+    "email": "rafael.lima@exemplo.com",
+    "saldo_formatado": "R$ 120.000,00",
+    "saldo_numerico": 120000.0,
+    "perfil_investidor": "Arrojado"
+  },
+  {
+    "id": "CLI-004",
+    "nome": "Beatriz Fonseca Santos",
+    "email": "beatriz.fonseca@exemplo.com",
+    "saldo_formatado": "R$ 8.200,00",
+    "saldo_numerico": 8200.0,
+    "perfil_investidor": "Conservador"
+  },
+  {
+    "id": "CLI-005",
+    "nome": "Lucas Guilherme Mendes",
+    "email": "lucas.mendes@exemplo.com",
+    "saldo_formatado": "R$ 75.400,00",
+    "saldo_numerico": 75400.0,
+    "perfil_investidor": "Moderado"
+  },
+  {
+    "id": "CLI-006",
+    "nome": "Juliana Martins Prado",
+    "email": "juliana.prado@exemplo.com",
+    "saldo_formatado": "R$ 210.000,00",
+    "saldo_numerico": 210000.0,
+    "perfil_investidor": "Arrojado"
+  }
+]

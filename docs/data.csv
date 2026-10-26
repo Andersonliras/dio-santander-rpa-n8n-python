@@ -1,0 +1,10 @@
+id,nome_produto,categoria,perfil_recomendado,rentabilidade_estimada,liquidez,risco,aplicacao_minima
+INV-001,Tesouro Selic 2029,Renda Fixa Pública,Conservador,100% Selic,Diária (D+0),Baixo,150.00
+INV-002,CDB Banco Santander DI 102%,Renda Fixa Privada,Conservador,102% CDI,Diária (D+0),Baixo,100.00
+INV-003,LCI Santander Sustentável 92%,Renda Fixa Isenta,Conservador,92% CDI (Isento IR),90 dias,Baixo,500.00
+INV-004,Tesouro IPCA+ 2035,Renda Fixa Híbrida,Moderado,IPCA + 6.35% a.a.,No Vencimento,Médio,200.00
+INV-005,Fundo Imobiliário Santander Renda (SXRF11),Fundo Imobiliário,Moderado,DY 11.2% a.a.,D+2 (B3),Médio,10.00
+INV-006,Debênture Incentivada Vale 2030,Renda Fixa Privada,Moderado,IPCA + 6.80% a.a.,No Vencimento,Médio,1000.00
+INV-007,Fundo Santander FIC Ações Ibovespa Ativo,Renda Variável,Arrojado,Variável (Supera Ibovespa),D+3,Alto,500.00
+INV-008,ETF Santander B3 Dividendos (ISND11),Renda Variável,Arrojado,Dividend Yield Focado,D+2 (B3),Alto,50.00
+INV-009,Fundo Multimercado Santander Macro Plus,Multimercado,Arrojado,CDI + 4.5% a.a.,D+30,Alto,1000.00
