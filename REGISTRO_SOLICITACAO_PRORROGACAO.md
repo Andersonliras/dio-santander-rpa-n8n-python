@@ -43,7 +43,23 @@
 
 ---
 
-## 🚀 Próximos Passos
-1. Concluir a checagem do CAPTCHA na aba do navegador e confirmar o envio.
-2. Aguardar o retorno do time da DIO com a confirmação de prazo no e-mail `inc.anderson@gmail.com`.
-3. Submeter o link do repositório no Desafio de Projeto assim que a extensão for confirmada ou enquanto o player estiver liberado.
+## ✅ Resposta Oficial do Suporte DIO (Deferido)
+* **Ticket ID:** `DIOB2C-99497`
+* **Data/Hora da Resposta:** 26/10/2026 às 15:15
+* **Atendente:** Camila Ayres (Equipe de Suporte | DIO)
+* **Status do Chamado:** Finalizado / Deferido
+
+### Mensagem do Atendimento:
+> *"Olá! Tudo bem?*  
+> *Sim, neste caso, você continuará com acesso à trilha após a data oficial de finalização.*  
+> *Atenciosamente,*  
+> *Equipe de Suporte | DIO"*
+
+---
+
+## 🎯 Situação e Próximos Passos
+1. ✅ **Acesso Garantido:** A DIO confirmou oficialmente a manutenção do acesso à trilha do Bootcamp Santander 2026.
+2. 💻 **Subir Repositório no GitHub:** Criar/vincular o repositório remoto no GitHub para disponibilizar o link público de entrega do Desafio de RPA.
+3. 🎓 **Assistir Aulas Pendentes:** Concluir a reprodução das últimas aulas do Módulo 4 no player da DIO.
+4. 📤 **Entregar Desafio de Projeto:** Submeter a URL do repositório no formulário de entrega da plataforma DIO e emitir o certificado de conclusão.
+
